@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Lead = require("../models/Lead");
-const verifyToken = require("../middleware/authMiddleware");
+const verifyToken = require("../middleware/middleware/authMiddleware");
 
 // CREATE
 router.post("/", verifyToken, async (req, res) => {
