@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect("mongodb://127.0.0.1:27017/minicrm")
+mongoose.connect("mongodb+srv://prashantmalagi60_db_user:admin123@cluster0.oqgqzrt.mongodb.net/minicrm")
 .then(() => console.log("MongoDB Connected"))
 .catch((err) => console.log(err));
 
