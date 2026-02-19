@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini CRM</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        input, button {
+            padding: 8px;
+            margin: 5px;
+        }
+
+        table {
+            width: 100%;
+            background: white;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Mini CRM</h1>
+<div id="stats" style="display:flex; gap:20px; margin-bottom:20px;">
+    <div style="background:#4CAF50; color:white; padding:15px; flex:1;">
+        <h3>Total Leads</h3>
+        <p id="totalLeads">0</p>
+    </div>
+
+    <div style="background:#2196F3; color:white; padding:15px; flex:1;">
+        <h3>New</h3>
+        <p id="newLeads">0</p>
+    </div>
+
+    <div style="background:#FF9800; color:white; padding:15px; flex:1;">
+        <h3>Contacted</h3>
+        <p id="contactedLeads">0</p>
+    </div>
+
+    <div style="background:#9C27B0; color:white; padding:15px; flex:1;">
+        <h3>Converted</h3>
+        <p id="convertedLeads">0</p>
+    </div>
+</div>
+
+
+<form id="leadForm">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="text" id="phone" placeholder="Phone">
+    <input type="text" id="source" placeholder="Source">
+    <button type="submit">Add Lead</button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Source</th>
+            <th>Status</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody id="leadTable">
+    </tbody>
+</table>
+
+<script src="script.js"></script>
+
+</body>
+</html>
